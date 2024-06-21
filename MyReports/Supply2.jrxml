@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Supply2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="52a260d5-ce1d-437d-aa59-d010c36edd40">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mySql"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    s.Supplier_Name,
+    SUM(o.MaximumQty) AS TotalQuantity
+FROM 
+    `Order` o
+JOIN 
+    Supplier s ON o.Supplier_Id = s.Supplier_Id
+GROUP BY 
+    s.Supplier_Name]]>
+	</queryString>
+	<field name="Supplier_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Supplier_Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Supplier_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplier"/>
+	</field>
+	<field name="TotalQuantity" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TotalQuantity"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalQuantity"/>
+	</field>
+	<group name="Supplier_Name">
+		<groupExpression><![CDATA[$F{Supplier_Name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="290" y="11" width="237" height="56" uuid="ec596ecb-efbe-4969-ac69-3d2cb01be578"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Double"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Supplier Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<summary>
+		<band height="226" splitType="Stretch">
+			<bar3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="-11" y="10" width="821" height="190" uuid="fbddb560-ab24-4822-a27c-882dabdd2a6b"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{Supplier_Name}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TotalQuantity}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{Supplier_Name}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{Supplier_Name}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TotalQuantity}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>
