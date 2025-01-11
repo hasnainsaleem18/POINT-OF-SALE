@@ -66,22 +66,22 @@ Jasper Reports is used for generating comprehensive reports. Reports include sal
 ## ERD
 The Entity-Relationship Diagram (ERD) for the Pharmacy POS System is provided below. It represents the database schema, including key tables and their relationships.
 
-![ERD](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/poserd.png)  
+![ERD](poserd.png)  
 *Figure 1: ERD for the Pharmacy POS System*
 
 ## POS Screenshots
 Here are some screenshots of the Pharmacy POS System user interface. These images showcase various sections of the application.
 
 ### Login Page
-![Login Page](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/1.png)  
+![Login Page](1.png)  
 *Figure 2: Login Page Interface*
 
 ### Dashboard
-![Dashboard](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/2.png)  
+![Dashboard](2.png)  
 *Figure 3: Dashboard Interface*
 
 ### Order Processing
-![Order Processing](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/3.png)  
+![Order Processing](3.png)  
 *Figure 4: Order Processing Interface*
 
 ## Contributing
