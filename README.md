@@ -1,15 +1,21 @@
 # Pharmacy POS System
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Database Setup](#database-setup)
-- [Usage](#usage)
-- [Reports](#reports)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [Pharmacy POS System](#pharmacy-pos-system)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Database Setup](#database-setup)
+  - [Usage](#usage)
+  - [Reports](#reports)
+  - [ERD](#erd)
+  - [POS Screenshots](#pos-screenshots)
+    - [Login Page](#login-page)
+    - [Dashboard](#dashboard)
+    - [Order Processing](#order-processing)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 The Pharmacy POS System is a comprehensive point of sale application designed to manage inventory, cart, orders, supplies, employees, and suppliers specifically for a pharmacy. It generates various reports and integrates with a SQL database. The application is built using Java, with NetBeans as the IDE, leveraging Ant for builds and Swing for the user interface. Jasper Reports is used for generating detailed reports.
@@ -34,10 +40,10 @@ The Pharmacy POS System is a comprehensive point of sale application designed to
 - **MySQL Workbench**: Tool for designing and managing SQL databases.
 
 ## Database Setup
-1. **Entity-Relationship Diagram (ERD):**
-   - The ERD for the database is available in the `pos_erd.mwb` file. It provides a visual representation of the database schema, including tables and relationships.
+1. **Entity-Relationship Diagram (ERD)**:
+   - The ERD for the database is available in the pos_erd.mwb file. It provides a visual representation of the database schema, including tables and relationships.
 
-2. **SQL Database File:**
+2. **SQL Database File**:
    - Use `posDB.sql` to set up the necessary tables and initial data in your MySQL database.
 
 ## Usage
@@ -52,11 +58,38 @@ The Pharmacy POS System is a comprehensive point of sale application designed to
 
 ## Reports
 Jasper Reports is used for generating comprehensive reports. Reports include sales summaries, inventory status, order details, and more. To generate a report:
-1. Navigate to the `Reports` section in the application.
+1. Navigate to the Reports section in the application.
 2. Select the desired report type.
 3. Configure any report parameters if required.
 4. Generate and view the report.
 
-## Author
+## ERD
+The Entity-Relationship Diagram (ERD) for the Pharmacy POS System is provided below. It represents the database schema, including key tables and their relationships.
 
-- Created by HASNAIN SALEEM
+![ERD](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/poserd.png)  
+*Figure 1: ERD for the Pharmacy POS System*
+
+## POS Screenshots
+Here are some screenshots of the Pharmacy POS System user interface. These images showcase various sections of the application.
+
+### Login Page
+![Login Page](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/1.png)  
+*Figure 2: Login Page Interface*
+
+### Dashboard
+![Dashboard](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/2.png)  
+*Figure 3: Dashboard Interface*
+
+### Order Processing
+![Order Processing](/Users/hasnainsaleem/Desktop/POINT-OF-SALE/3.png)  
+*Figure 4: Order Processing Interface*
+
+## Contributing
+If you would like to contribute to this project, feel free to fork the repository, make your changes, and create a pull request. Please make sure to follow the code of conduct and adhere to the project's coding standards.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+---
+
+*Created by HASNAIN SALEEM*
